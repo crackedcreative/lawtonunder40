@@ -1,0 +1,16 @@
+.title-container{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    background: $secondary;
+    color: #fff;
+    h1{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+.innerContent{
+    padding: 2em 1em;
+}

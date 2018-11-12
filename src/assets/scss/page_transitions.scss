@@ -1,0 +1,95 @@
+.transition-enter{
+    .pageContent{
+        display: none;
+    }
+}
+.transition-enter-done {
+    .pageContent{
+        display: block;
+    }
+}
+.page-transition-left,
+.page-transition-right{
+    position: fixed;
+    width: 150%;
+    visibility: hidden;
+    height: 60%;
+    z-index: 9999;
+}
+.page-transition-left{
+    top: 0;
+    left: -150%;
+    background: $primary;
+    transition: left .5s;
+    transform: skew(45deg);
+}
+.page-transition-right{
+    bottom: 0;
+    right: -150%;
+    width: 150%;
+    z-index: 9998;
+    background: $secondary;
+    transition: right .5s;
+    transform: skew(-45deg);
+}
+.transition-enter-active{
+    .page-transition-left{
+        left: -25%;
+        visibility: visible;
+    }
+}
+.transition-enter-done{
+    .page-transition-left{
+        left: 150%;
+        visibility: visible;
+    }
+}
+.transition-enter-active{
+    .page-transition-right{
+        right: -25%;
+        visibility: visible;
+    }
+}
+.transition-enter-done{
+    .page-transition-right{
+        right: 150%;
+        visibility: visible;
+    }
+}
+.page-transition-top,
+.page-transition-bottom{
+    position: fixed;
+    height: 100%;
+    width: 60%;
+    visibility: hidden;
+    transition: top .5s;
+}
+.page-transition-top{
+    top: -100%;
+    left: 0;
+    background: $secondary;
+    z-index: 9999;
+}
+.page-transition-bottom{
+    top: 100%;
+    right: 0;
+    background: $primary;
+    z-index: 9998;
+}
+.transition-enter-active{
+    .page-transition-bottom,
+    .page-transition-top{
+        top: 0;
+        visibility: visible;
+    }
+}
+.transition-enter-done{
+    .page-transition-bottom{
+        top: -100%;
+        visibility: visible;
+    }
+    .page-transition-top{
+        top: 100%;
+        visibility: visible;
+    }
+}
