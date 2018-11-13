@@ -11,6 +11,16 @@ import {Route, Switch} from 'react-router-dom';
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 
 class App extends Component {
+  state = {
+      hideNav: false,
+  };
+  componentDidMount() {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+  }
+  resize() {
+      this.setState({hideNav: window.innerWidth <= 1023});
+  }
   render() {
     return (
       <>
@@ -19,7 +29,7 @@ class App extends Component {
         <TransitionGroup>
           <CSSTransition
               key={location.key}
-              timeout={750}
+              timeout={this.state.hideNav ? 0 : 750}
               classNames="transition"
             >
             <Switch location={location}>

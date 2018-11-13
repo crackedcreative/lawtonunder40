@@ -28,6 +28,15 @@ header{
     p{
         margin: 0;
     }
+    .headerRight{
+        position: relative;
+        .fa-bars{
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            color: #fff;
+        }
+    }
     nav{
         text-align: right;
         > ul {
