@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import TextField from '@material-ui/core/TextField';
+import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
@@ -11,8 +12,10 @@ export default class Contact extends Component {
             <Helmet
                 title="Contact | Lawton Under 40" 
             />
-            <div className="page-transition-top"></div>
-            <div className="page-transition-bottom"></div>
+            <Hidden smDown>
+                <div className="page-transition-top"></div>
+                <div className="page-transition-bottom"></div>
+            </Hidden>
             <div className="pageContent">
                 <div className="title-container">
                     <h1>Contact</h1>

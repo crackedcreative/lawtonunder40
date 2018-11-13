@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class About extends Component {
     render(){
@@ -8,8 +9,10 @@ export default class About extends Component {
             <Helmet
                 title="About | Lawton Under 40" 
             />
-            <div className="page-transition-left"></div>
-            <div className="page-transition-right"></div>
+            <Hidden smDown>
+                <div className="page-transition-left"></div>
+                <div className="page-transition-right"></div>
+            </Hidden>
             <div className="pageContent">
                 <div className="title-container">
                     <h1>About Lawton Under 40</h1>

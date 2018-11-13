@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class Nominations extends Component {
     render(){
@@ -8,8 +9,10 @@ export default class Nominations extends Component {
             <Helmet
                 title="Nominations | Lawton Under 40" 
             />
-            <div className="page-transition-top"></div>
-            <div className="page-transition-bottom"></div>
+            <Hidden smDown>
+                <div className="page-transition-top"></div>
+                <div className="page-transition-bottom"></div>
+            </Hidden>
             <div className="pageContent">
                 <div className="title-container">
                     <h1>Nominations</h1>

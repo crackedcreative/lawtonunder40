@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Grid from '@material-ui/core/Grid';
-import LazyLoad from 'react-lazyload';
 import axios from 'axios';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class Sponsors extends Component {
     constructor(props) {
@@ -24,8 +24,10 @@ export default class Sponsors extends Component {
             <Helmet
                 title="Sponsors | Lawton Under 40" 
             />
-            <div className="page-transition-left"></div>
-            <div className="page-transition-right"></div>
+            <Hidden smDown>
+                <div className="page-transition-left"></div>
+                <div className="page-transition-right"></div>
+            </Hidden>
             <div className="pageContent">
                 <div className="title-container">
                     <h1>Sponsors</h1>
