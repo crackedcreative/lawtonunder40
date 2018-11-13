@@ -36,9 +36,7 @@ export default class Sponsors extends Component {
                         <Grid container spacing={16} alignItems="center" justify="center">
                             {this.state.sponsors.map((sponsor, i) => (
                                 <Grid item md="3" key={i}>
-                                    <LazyLoad height={150} once>
-                                        <img src={sponsor.logo} alt="" />
-                                    </LazyLoad>
+                                    <img src={sponsor.logo} alt="" />
                                 </Grid>
                                 )
                             )}
