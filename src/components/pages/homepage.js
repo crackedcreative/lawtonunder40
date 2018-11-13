@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 import LazyLoad from 'react-lazyload';
 import { NavLink } from 'react-router-dom';
 import tier1image from '../../assets/images/tier-1-image.jpg'
@@ -21,14 +22,15 @@ export default class Homepage extends Component {
         })
     }
     render() {
-        console.log(this.state.sponsors);
         return (
             <div>
                 <Helmet
                     title="Lawton Under 40"
                 />
-                <div className="page-transition-top"></div>
-                <div className="page-transition-bottom"></div>
+                <Hidden smDown>
+                    <div className="page-transition-top"></div>
+                    <div className="page-transition-bottom"></div>
+                </Hidden>
                 <div className="pageContent">
                     <div className="hero">
                         <div className="overText">
@@ -41,12 +43,12 @@ export default class Homepage extends Component {
                         <div className="redSlash"></div>
                         <div className="wrap">
                             <Grid container spacing={32} alignItems="center">
-                                <Grid item md="4" className="text-center">
+                                <Grid item xs="12" sm="4" className="text-center">
                                     <LazyLoad height={444} once>
                                         <img src={tier1image} alt="" />
                                     </LazyLoad>
                                 </Grid>
-                                <Grid item md="8" className="rightContent">
+                                <Grid item xs="12" sm="8" className="rightContent">
                                     <h2><span>About</span> Lawton Under 40</h2>
                                     <div>
                                         <p>Esse enim id dolore cillum tempor nulla sit cupidatat eiusmod culpa sit Lorem dolore. Duis sit aliqua laborum aute voluptate laboris deserunt qui tempor. Dolore anim culpa ullamco incididunt minim minim labore aliquip adipisicing est culpa. Nisi exercitation voluptate aliqua mollit anim consequat Lorem enim culpa eiusmod consectetur mollit reprehenderit. Aliqua ex enim aliqua sint irure et cillum labore ea.</p>
@@ -59,21 +61,21 @@ export default class Homepage extends Component {
                     <div className="tier-2">
                         <h2>How it Works</h2>
                         <Grid container spacing={16} alignItems="center">
-                            <Grid item md="4" className="step">
+                            <Grid item xs="12" md="4" className="step">
                                 <div>
                                     <p className="number">01</p>
                                     <h3>Nominations</h3>
                                     <p>Dolor dolor anim veniam reprehenderit id eu proident eiusmod adipisicing in.</p>
                                 </div>
                             </Grid>
-                            <Grid item md="4" className="step">
+                            <Grid item xs="12" md="4" className="step">
                                 <div>
                                     <p className="number">02</p>
                                     <h3>Board Convenes</h3>
                                     <p>Laborum magna aliquip Lorem irure ipsum cupidatat.</p>
                                 </div>
                             </Grid>
-                            <Grid item md="4" className="step">
+                            <Grid item xs="12" md="4" className="step">
                                 <div>
                                     <p className="number">03</p>
                                     <h3>Awards Banquet</h3>
@@ -91,17 +93,17 @@ export default class Homepage extends Component {
                     </div>
                     <div className="tier-4">
                         <Grid container spacing={16}>
-                            <Grid item md="2" className="step">
+                            <Grid item xs="12" sm="4" md="2" className="step">
                                 <div className="sticky">
                                     <h2><span>Check Out Our</span> Sponsors</h2>
                                     <p><NavLink to="/sponsors" className="button">Become a Sponsor</NavLink></p>
                                 </div>
                             </Grid>
-                            <Grid item md="10" className="step">
+                            <Grid item xs="12" sm="8" md="10" className="step">
                                 <div>
                                     <Grid container spacing={8} alignItems="center">
                                         {this.state.sponsors.map((sponsor, i) =>  (
-                                                <Grid item md="3" key={i}>
+                                                <Grid item xs="12" sm="6" md="3" key={i}>
                                                     <img src={sponsor.logo} alt="" />
                                                 </Grid>
                                             )

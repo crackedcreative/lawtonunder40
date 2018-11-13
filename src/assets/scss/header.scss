@@ -3,9 +3,22 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100%;
     z-index: 1001;
     padding: 1em;
     transition: all .5s;
+    background: $secondary;
+    img{
+        width: 100%;
+        max-width: 120px;
+        transition: all .5s;
+    }
+    @media screen and (min-width: 1024px){
+        background: none;
+        img{
+            max-width: 200px;
+        }
+    }
     &.fixed{
         background: $secondary;
         img{
@@ -14,10 +27,6 @@ header{
     }
     p{
         margin: 0;
-    }
-    img{
-        max-width: 200px;
-        transition: all .5s;
     }
     nav{
         text-align: right;

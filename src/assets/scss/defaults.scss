@@ -61,4 +61,18 @@ body {
   .text-center{
       text-align: center;
   }
-  
+  .large-text-center{
+      @media screen and (min-width: 1024px){
+          text-align: center;
+      }
+  }
+  .medium-text-center{
+      @media screen and (min-width: 767px) and (max-width: 1024px){
+          text-align: center;
+      }
+  }
+  .small-text-center{
+      @media screen and (max-width: 767px){
+          text-align: center;
+      }
+  }
