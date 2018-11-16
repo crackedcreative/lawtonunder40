@@ -60,7 +60,7 @@ export default class Homepage extends Component {
                     </div>
                     <div className="tier-2">
                         <h2>How it Works</h2>
-                        <Grid container spacing={16} alignItems="center">
+                        <Grid container spacing={16}>
                             <Grid item xs="12" md="4" className="step">
                                 <div>
                                     <p className="number">01</p>

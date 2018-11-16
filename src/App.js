@@ -7,6 +7,8 @@ import About from './components/pages/about';
 import Nominations from './components/pages/nominations';
 import Sponsors from './components/pages/sponsors';
 import Contact from './components/pages/contact';
+import FAQ from './components/pages/faq';
+import NotFound from './components/pages/notfound';
 import {Route, Switch} from 'react-router-dom';
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 
@@ -37,7 +39,9 @@ class App extends Component {
               <Route path="/about" component={About} />
               <Route path="/nominations" component={Nominations} />
               <Route path="/sponsors" component={Sponsors} />
+              <Route path="/faq" component={FAQ} />
               <Route path="/contact" component={Contact} />
+              <Route component={NotFound} />
             </Switch>
           </CSSTransition>
         </TransitionGroup>

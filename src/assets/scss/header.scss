@@ -12,6 +12,16 @@ header{
         width: 100%;
         max-width: 120px;
         transition: all .5s;
+        visibility: visible;
+        opacity: 1;
+        .mobile-active & {
+            visibility: hidden;
+            opacity: 0;
+            @media screen and (min-width: 1024px){
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     }
     @media screen and (min-width: 1024px){
         background: none;
@@ -30,50 +40,85 @@ header{
     }
     .headerRight{
         position: relative;
-        .fa-bars{
+        .fa{
             position: absolute;
             top: -5px;
             right: 10px;
             color: #fff;
+            transition: right .25s;
+            .mobile-active & {
+                right: 300px;
+            }
         }
     }
     nav{
-        text-align: right;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        height: 100%;
+        width: 280px;
+        background: $primary;
+        z-index: 9999;
+        transition: right .25s;
+        padding-top: 1em;
+        .mobile-active &{
+            right: 0;
+        }
         > ul {
             margin: 0;
             padding: 0;
             list-style: none;
             > li {
-                display: inline-block;
-                list-style: none;
-                a{
+                > a {
+                    display: block;
                     color: #fff;
-                    display: inline-block;
-                    padding: .5em 1em;
+                    padding: 1em;
                     text-transform: uppercase;
                     text-decoration: none;
                     font-weight: 900;
                     letter-spacing: 2px;
-                    font-size: .75rem;
+                    font-size: 1.25rem;
                     transition: all .5s;
                     position: relative;
-                    &::after{
-                        content: "";
-                        display: block;
-                        width: 0px;
-                        background: $primary;
-                        height: 3px;
-                        transition: all .25s;
-                        position: absolute;
-                        bottom: 0;
-                        left: 1em;
-                    }
-                    &.active,
-                    &:hover{
+                    border-bottom: 1px dashed darken($primary, 15%);
+                }
+            }
+        }
+        @media screen and (min-width: 1024px){
+            text-align: right;
+            position: relative;
+            top: auto;
+            right: auto;
+            width: auto;
+            background: none;
+            padding-top: 0;
+            > ul {
+                > li {
+                    display: inline-block;
+                    list-style: none;
+                    a{
+                        display: inline-block;
+                        font-size: .75rem;
+                        padding: .5em 1em;
+                        border-bottom: none;
                         &::after{
-                            width: 20px;
+                            content: "";
+                            display: block;
+                            width: 0px;
+                            background: $primary;
+                            height: 3px;
+                            transition: all .25s;
+                            position: absolute;
+                            bottom: 0;
+                            left: 1em;
                         }
-                        color: $primary;
+                        &.active,
+                        &:hover{
+                            &::after{
+                                width: 20px;
+                            }
+                            color: $primary;
+                        }
                     }
                 }
             }

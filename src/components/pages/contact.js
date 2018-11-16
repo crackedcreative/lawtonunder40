@@ -23,7 +23,7 @@ export default class Contact extends Component {
                 <div className="innerContent">
                     <div className="wrap">
                         <p>Cupidatat reprehenderit culpa amet voluptate commodo commodo sit esse consectetur culpa nulla. Nisi id aute laborum Lorem reprehenderit tempor. Cillum qui laboris reprehenderit ad labore quis dolor minim. Eiusmod consequat excepteur culpa pariatur. Pariatur elit laboris labore eiusmod.</p>
-                        <form noValidate autoComplete="off">
+                        <form noValidate autoComplete="off" action="/post" method="post">
                             <Grid container spacing={16}>
                                 <Grid item xs="12" sm="6">
                                     <TextField
@@ -50,6 +50,7 @@ export default class Contact extends Component {
                                 </Grid>
                                 <Grid item xs="12">
                                     <Button
+                                    type="submit"
                                     variant="outlined" 
                                     size="large"
                                     color="primary"
