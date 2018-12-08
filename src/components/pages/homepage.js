@@ -63,23 +63,29 @@ export default class Homepage extends Component {
                         <Grid container spacing={16}>
                             <Grid item xs="12" md="4" className="step">
                                 <div>
-                                    <p className="number">01</p>
-                                    <h3>Nominations</h3>
-                                    <p>Dolor dolor anim veniam reprehenderit id eu proident eiusmod adipisicing in.</p>
+                                    <div>
+                                        <p className="number">01</p>
+                                        <h3>Nominations</h3>
+                                        <p>Dolor dolor anim veniam reprehenderit id eu proident eiusmod adipisicing in.</p>
+                                    </div>
                                 </div>
                             </Grid>
                             <Grid item xs="12" md="4" className="step">
                                 <div>
-                                    <p className="number">02</p>
-                                    <h3>Board Convenes</h3>
-                                    <p>Laborum magna aliquip Lorem irure ipsum cupidatat.</p>
+                                    <div>
+                                        <p className="number">02</p>
+                                        <h3>Board Convenes</h3>
+                                        <p>Laborum magna aliquip Lorem irure ipsum cupidatat.</p>
+                                    </div>
                                 </div>
                             </Grid>
                             <Grid item xs="12" md="4" className="step">
                                 <div>
-                                    <p className="number">03</p>
-                                    <h3>Awards Banquet</h3>
-                                    <p>Commodo excepteur minim irure laboris voluptate mollit elit fugiat.</p>
+                                    <div>
+                                        <p className="number">03</p>
+                                        <h3>Awards Banquet</h3>
+                                        <p>Commodo excepteur minim irure laboris voluptate mollit elit fugiat.</p>
+                                    </div>
                                 </div>
                             </Grid>
                         </Grid>
