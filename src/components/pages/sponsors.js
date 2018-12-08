@@ -45,48 +45,55 @@ export default class Sponsors extends Component {
                                 )
                                 )}
                             </Grid>
-                            <form noValidate autoComplete="off" action="/post" method="post">
-                                <Grid container spacing={16}>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Name"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Email Address"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12">
-                                        <TextField
-                                            multiline
-                                            rows="4"
-                                            label="Tell us about your company"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <input
-                                        accept="image/*"
-                                        id="raised-button-file"
-                                        multiple
-                                        type="file"
-                                    />
-                                    <Grid item xs="12">
-                                        <Button
-                                            type="submit"
-                                            variant="outlined"
-                                            size="large"
-                                            color="primary">
-                                            Submit
+                            <div className="section">
+                                <h2>Sponsorship Form</h2>
+                                <p>To become a sponsor, please fill out the form below.</p>
+                                <form noValidate autoComplete="off" action="/post" method="post">
+                                    <Grid container spacing={16}>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Name"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Email Address"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12">
+                                            <TextField
+                                                multiline
+                                                rows="4"
+                                                label="Tell us about your company"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12">
+                                            <label for="fileUpload">Upload Your Logo</label><br></br>
+                                            <input
+                                                accept="image/*"
+                                                id="fileUpload"
+                                                multiple
+                                                type="file"
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12">
+                                            <Button
+                                                type="submit"
+                                                variant="outlined"
+                                                size="large"
+                                                color="primary">
+                                                Submit
                                     </Button>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

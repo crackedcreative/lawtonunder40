@@ -23,87 +23,89 @@ export default class Nominations extends Component {
                     <div className="innerContent">
                         <div className="wrap">
                             <p>Cupidatat reprehenderit culpa amet voluptate commodo commodo sit esse consectetur culpa nulla. Nisi id aute laborum Lorem reprehenderit tempor. Cillum qui laboris reprehenderit ad labore quis dolor minim. Eiusmod consequat excepteur culpa pariatur. Pariatur elit laboris labore eiusmod.</p>
-                            <h2>Nomination Form</h2>
-                            <p>Please fill out the form below to complete your nomination request.</p>
-                            <form noValidate autoComplete="off" action="/post" method="post">
-                                <Grid container spacing={16}>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominator's First and Last Name"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
+                            <div className="section">
+                                <h2>Nomination Form</h2>
+                                <p>Please fill out the form below to complete your nomination request.</p>
+                                <form noValidate autoComplete="off" action="/post" method="post">
+                                    <Grid container spacing={16}>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominator's First and Last Name"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominator's Email Address"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominator's Phone Number"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominator's Employer"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominee's First Name"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominee's Last Name"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominee's Email Address"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12" sm="6">
+                                            <TextField
+                                                label="Nominee's Employer"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12">
+                                            <TextField
+                                                multiline
+                                                rows="10"
+                                                label="Why should your nominee be considered?"
+                                                variant="outlined"
+                                                fullWidth
+                                            />
+                                        </Grid>
+                                        <Grid item xs="12">
+                                            <Button
+                                                type="submit"
+                                                variant="outlined"
+                                                size="large"
+                                                color="primary"
+                                            >
+                                                Submit
+                                            </Button>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominator's Email Address"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominator's Phone Number"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominator's Employer"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominee's First Name"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominee's Last Name"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominee's Email Address"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12" sm="6">
-                                        <TextField
-                                            label="Nominee's Employer"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12">
-                                        <TextField
-                                            multiline
-                                            rows="10"
-                                            label="Why should your nominee be considered?"
-                                            variant="outlined"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid item xs="12">
-                                        <Button
-                                            type="submit"
-                                            variant="outlined"
-                                            size="large"
-                                            color="primary"
-                                        >
-                                            Submit
-                                    </Button>
-                                    </Grid>
-                                </Grid>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

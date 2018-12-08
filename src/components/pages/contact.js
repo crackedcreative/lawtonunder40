@@ -23,43 +23,47 @@ export default class Contact extends Component {
                 <div className="innerContent">
                     <div className="wrap">
                         <p>Cupidatat reprehenderit culpa amet voluptate commodo commodo sit esse consectetur culpa nulla. Nisi id aute laborum Lorem reprehenderit tempor. Cillum qui laboris reprehenderit ad labore quis dolor minim. Eiusmod consequat excepteur culpa pariatur. Pariatur elit laboris labore eiusmod.</p>
-                        <form noValidate autoComplete="off" action="/post" method="post">
-                            <Grid container spacing={16}>
-                                <Grid item xs="12" sm="6">
-                                    <TextField
-                                        label="Name"
-                                        variant="outlined"
-                                        fullWidth
-                                    />
+                        <div className="section">
+                            <h2>Contact Us</h2>
+                            <p>To get in touch, please fill out the form below.</p>
+                            <form noValidate autoComplete="off" action="/post" method="post">
+                                <Grid container spacing={16}>
+                                    <Grid item xs="12" sm="6">
+                                        <TextField
+                                            label="Name"
+                                            variant="outlined"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs="12" sm="6">
+                                        <TextField
+                                            label="Email Address"
+                                            variant="outlined"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs="12">
+                                        <TextField
+                                            multiline
+                                            rows="4"
+                                            label="Your Message"
+                                            variant="outlined"
+                                            fullWidth
+                                        />
+                                    </Grid>
+                                    <Grid item xs="12">
+                                        <Button
+                                        type="submit"
+                                        variant="outlined" 
+                                        size="large"
+                                        color="primary"
+                                        >
+                                            Submit
+                                        </Button>
+                                    </Grid>
                                 </Grid>
-                                <Grid item xs="12" sm="6">
-                                    <TextField
-                                        label="Email Address"
-                                        variant="outlined"
-                                        fullWidth
-                                    />
-                                </Grid>
-                                <Grid item xs="12">
-                                    <TextField
-                                        multiline
-                                        rows="4"
-                                        label="Your Message"
-                                        variant="outlined"
-                                        fullWidth
-                                    />
-                                </Grid>
-                                <Grid item xs="12">
-                                    <Button
-                                    type="submit"
-                                    variant="outlined" 
-                                    size="large"
-                                    color="primary"
-                                    >
-                                        Submit
-                                    </Button>
-                                </Grid>
-                            </Grid>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
