@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 import tier1image from '../../assets/images/tier-1-image.jpg'
 import Helmet from 'react-helmet';
 import axios from 'axios';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class Homepage extends Component {
@@ -41,11 +42,11 @@ export default class Homepage extends Component {
                             <ScrollAnimation animateOnce="true" animateIn="fadeIn">
                             <h2>Welcome to Lawton Under 40</h2>
                             <p>Est dolore dolor labore ad nostrud. Duis consectetur labore nisi laborum incididunt cillum ex sunt eiusmod. Nostrud consectetur ad enim dolore ipsum aute adipisicing aliquip magna nostrud nostrud est enim reprehenderit. Consequat consectetur nostrud minim officia enim ex.</p>
-                            <p><NavLink to="/about" className="button">About Us</NavLink></p>
+                            <p><AnchorLink offset="65" href="#tier1" className="button">About Us</AnchorLink></p>
                             </ScrollAnimation>
                         </div>
                     </div>
-                    <div className="tier-1">
+                    <div className="tier-1" id="tier1">
                         <div className="redSlash"></div>
                         <div className="wrap">
                             <Grid container spacing={32} alignItems="center">
