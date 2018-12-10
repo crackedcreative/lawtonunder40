@@ -29,7 +29,6 @@ export default class Homepage extends Component {
                 <Helmet
                     title="Lawton Under 40"
                 >
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
                     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
                 </Helmet>
                 <Hidden smDown>
