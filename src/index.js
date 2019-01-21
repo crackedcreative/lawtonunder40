@@ -12,3 +12,7 @@ ReactDOM.render(<BrowserRouter><ScrollToTop><App /></ScrollToTop></BrowserRouter
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.register();
+navigator.serviceWorker.getRegistrations()
+    .then(registrationsArray => {
+    registrationsArray[0].update();
+})
